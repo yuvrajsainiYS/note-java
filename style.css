@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: gray; 
+   height: 50px;
+   display: flex;
+   justify-content: flex-end;
+
+}
+.container button{
+    background-color: greenyellow;
+    border-radius: 8px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+    
+}
+button:hover{
+   width: 110px;
+   height: 44px;
+   background-color: rgb(149, 228, 30);
+   transition: 0.5s;
+   
+}
+ .add{
+    width: 30%;
+    height: 274px;
+    background-color:grey ;
+    color: white;
+    margin: 10px 10px 10px 10px;
+    
+}
+.notes{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}

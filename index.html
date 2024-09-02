@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: gray; 
+   height: 50px;
+   display: flex;
+   justify-content: flex-end;
+
+}
+.container button{
+    background-color: greenyellow;
+    border-radius: 8px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+    
+}
+button:hover{
+   width: 110px;
+   height: 44px;
+   background-color: rgb(149, 228, 30);
+   transition: 0.5s;
+   
+}
+ .add{
+    width: 30%;
+    height: 274px;
+    background-color:grey ;
+    color: white;
+    margin: 10px 10px 10px 10px;
+    
+}
+.notes{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+</style>
+<body>
+ 
+        <div class="container">
+          <button onclick="work()">add note</button>  
+        </div>
+
+    <div class="notes" id="addd">
+        
+    </div>
+
+
+
+    <script src="script.js">
+        var addd = document.getElementById("addd")
+function work(){
+    var note = document.createElement("div")
+    note.classList.add("note")
+    note.innerHTML=` <div class="add">
+            <i class='bx bxs-save' ></i>
+        <i class='bx bxs-message-alt-x' onclick="remove()"></i>
+          <textarea cols="53" rows="17"></textarea>
+        </div>`
+     addd.appendChild(note)
+    }   
+    
+    function remove(){
+       note.remove("add")
+    }
+    </script>
+    
+</body>
+</html>
